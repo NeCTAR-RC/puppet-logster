@@ -29,7 +29,7 @@ define logster::graphite (
 
   cron { "cron-${name}":
     ensure  => present,
-    command => "/usr/sbin/logster --output=graphite --graphite-host=${host}:${port} ${type} ${file} -p ${prefix}  > /dev/null 2>&1",
+    command => "/usr/bin/logster --output=graphite --graphite-host=${host}:${port} ${type} ${file} -p ${prefix}  > /dev/null 2>&1",
     user    => 'root',
     minute  => '*',
   }
