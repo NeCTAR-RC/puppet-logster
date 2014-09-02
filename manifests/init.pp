@@ -23,4 +23,9 @@ class logster {
       ensure => present,
   }
 
+  package {
+    'python-logster-nectar':
+      ensure => present,
+  }
+
 }
